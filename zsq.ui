@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>案源发送（张书侨）</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image/app.qrc">
+    <normaloff>:/app/草莓.png</normaloff>:/app/草莓.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QPalette{background:#F0F0F0;}QGroupBox#gboxDevicePanel&gt;QLabel{color:#CACAD0;}
+
+QWidget#frmMain,QWidget[Form=&quot;true&quot;]{
+border:1px solid #575757;
+border-radius:0px;
+}
+
+.QFrame{
+border:1px solid #D8D8D8;
+border-radius:5px;
+
+}
+
+QLabel,QLineEdit,QTextEdit,QPlainTextEdit,QSpinBox,QGroupBox,QComboBox,QDateEdit,QTimeEdit,QDateTimeEdit,QSpinBox,QTreeView,QListView,QTableView,QTabWidget::pane{
+color:#232524;
+}
+
+QWidget#widget_title{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QLabel#lab_Ico,QLabel#lab_Title{
+border-radius:0px;
+color:#CACAD0;
+background-color:rgba(0,0,0,0);
+border-style:none;
+}
+
+QToolButton::menu-indicator{
+image:None;
+}
+
+QToolButton,QWidget#widget_frm&gt;QLabel{
+border-style:none;
+padding:10px;
+color:#CACAD0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QToolButton:hover,QWidget#widget_frm&gt;QLabel:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QLabel[labVideo=&quot;true&quot;]{
+color:#CACAD0;
+border:1px solid #575757;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QLabel[labVideo=&quot;true&quot;]:focus{
+border:1px solid #FF0000;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QLineEdit,QTextEdit,QPlainTextEdit,QSpinBox{
+border:1px solid #D8D8D8;
+border-radius:5px;
+padding:2px;
+background:none;
+selection-background-color:#4D4D4D;
+selection-color:#CACAD0;
+}
+
+QLineEdit[echoMode=&quot;2&quot;]{
+lineedit-password-character:9679;
+}
+
+.QGroupBox{
+border:1px solid #D8D8D8;
+border-radius:5px;
+
+}
+
+.QPushButton{
+border-style:none;
+border:1px solid #D8D8D8;
+color:#CACAD0;
+padding:5px;
+border-radius:5px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+.QPushButton:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+.QPushButton:pressed{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+.QPushButton:disabled{
+color:#838383;
+background:#F4F4F4;
+}
+
+QPushButton#btnSplitterH{
+padding:2px;
+min-height:8px;
+}
+
+QPushButton#btnMenu,QPushButton#btnMenu_Min,QPushButton#btnMenu_Max,QPushButton#btnMenu_Close,QPushButton#btnSplitterV,QPushButton#btnSplitterH{
+border-radius:0px;
+color:#CACAD0;
+background-color:rgba(0,0,0,0);
+border-style:none;
+}
+
+QPushButton#btnMenu:hover,QPushButton#btnMenu_Min:hover,QPushButton#btnMenu_Max:hover,QPushButton#btnSplitterV:hover,QPushButton#btnSplitterH:hover{
+background-color:qlineargradient(spread:pad,x1:0,y1:1,x2:0,y2:0,stop:0 rgba(25,134,199,0),stop:1 #636363);
+}
+
+QPushButton#btnMenu_Close:hover{
+background-color:qlineargradient(spread:pad,x1:0,y1:1,x2:0,y2:0,stop:0 rgba(238,0,0,128),stop:1 rgba(238,44,44,255));
+}
+
+QCheckBox{
+color:#232524;
+spacing:2px;
+}
+
+QCheckBox::indicator{
+width:20px;
+height:20px;
+}
+
+QCheckBox::indicator:unchecked{
+image: url(:/app/Checkbox Unchecked-1.png);
+}
+
+QCheckBox::indicator:checked{
+	image: url(:/app/Checkbox Checked.png);
+}
+
+QRadioButton{
+color:#232524;
+spacing:2px;
+}
+
+QRadioButton::indicator{
+width:15px;
+height:15px;
+}
+
+QRadioButton::indicator::unchecked{
+image:url(:/image/radio_normal.png);
+}
+
+QRadioButton::indicator::checked{
+image:url(:/image/radio_selected.png);
+}
+
+QSpinBox::up-button,QDateEdit::up-button,QTimeEdit::up-button,QDateTimeEdit::up-button{
+image:url(:/image/add_top.png);
+}
+
+QSpinBox::down-button,QDateEdit::down-button,QTimeEdit::down-button,QDateTimeEdit::down-button{
+image:url(:/image/add_bottom.png);
+}
+
+QComboBox,QDateEdit,QTimeEdit,QDateTimeEdit,QSpinBox{
+border-radius:3px;
+padding:3px 5px 3px 5px;
+border:1px solid #D8D8D8;
+background:none;
+selection-background-color:#4D4D4D;
+selection-color:#CACAD0;
+}
+
+QComboBox::drop-down,QDateEdit::drop-down,QTimeEdit::drop-down,QDateTimeEdit::drop-down{
+subcontrol-origin:padding;
+subcontrol-position:top right;
+width:15px;
+border-left-width:1px;
+border-left-style:solid;
+border-top-right-radius:3px;
+border-bottom-right-radius:3px;
+border-left-color:#D8D8D8;
+}
+
+QComboBox::down-arrow,QDateEdit::down-arrow,QTimeEdit::down-arrow,QDateTimeEdit::down-arrow{
+image:url(:/image/add_bottom.png);
+}
+
+QMenu{
+color:#CACAD0;
+background-color:#4D4D4D;
+margin:2px;
+}
+
+QMenu::item{
+padding:3px 20px 3px 20px;
+}
+
+QMenu::indicator{
+width:13px;
+height:13px;
+}
+
+QMenu::item:selected{
+color:#CACAD0;
+border:0px solid #575757;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QMenu::separator{
+height:1px;
+background:#575757;
+}
+
+QProgressBar{
+background:#D8D8D8;
+border-radius:5px;
+text-align:center;
+border:1px solid #D8D8D8;
+}
+
+QProgressBar::chunk{
+width:5px;
+margin:0.5px;
+background-color:#4D4D4D;
+}
+
+QSlider::groove:horizontal,QSlider::add-page:horizontal{
+height:8px;
+border-radius:3px;
+background:#D8D8D8;
+}
+
+QSlider::sub-page:horizontal{
+height:8px;
+border-radius:3px;
+background:#575757;
+}
+
+QSlider::handle:horizontal{
+width:13px;
+margin-top:-3px;
+margin-bottom:-3px;
+border-radius:6px;
+background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #FFFFFF,stop:0.8 #575757);
+}
+
+QSlider::groove:vertical,QSlider::sub-page:vertical{
+width:8px;
+border-radius:3px;
+background:#D8D8D8;
+}
+
+QSlider::add-page:vertical{
+width:8px;
+border-radius:3px;
+background:#575757;
+}
+
+QSlider::handle:vertical{
+height:13px;
+margin-left:-2px;
+margin-right:-3px;
+border-radius:6px;
+background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #FFFFFF,stop:0.8 #575757);
+}
+
+QScrollBar:vertical{
+width:10px;
+background-color:rgba(0,0,0,0%);
+padding-top:10px;
+padding-bottom:10px;
+}
+
+QScrollBar:horizontal{
+height:10px;
+background-color:rgba(0,0,0,0%);
+padding-left:10px;
+padding-right:10px;
+}
+
+QScrollBar::handle:vertical,QScrollBar::handle:horizontal{
+width:10px;
+background:#575757;
+}
+
+QScrollBar::handle:vertical:hover,QScrollBar::handle:horizontal:hover{
+width:10px;
+background:#292929;
+}
+
+QScrollBar::add-line:vertical{
+height:10px;
+width:10px;
+subcontrol-position:bottom;
+subcontrol-origin:margin;
+border-border-image:url(:/image/add_bottom.png);
+}
+
+QScrollBar::add-line:horizontal{
+height:10px;
+width:10px;
+subcontrol-position:right;
+subcontrol-origin:margin;
+border-image:url(:/image/add_right.png);
+}
+
+QScrollBar::sub-line:vertical{
+height:10px;
+width:10px;
+subcontrol-position:top;
+subcontrol-origin:margin;
+border-image:url(:/image/add_top.png);
+}
+
+QScrollBar::sub-line:horizontal{
+height:10px;
+width:10px;
+subcontrol-position:left;
+subcontrol-origin:margin;
+border-image:url(:/image/add_left.png);
+}
+
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical,QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal{
+width:10px;
+background:#D8D8D8;
+}
+
+QScrollArea{
+border:0px;
+}
+
+QTreeView,QListView,QTableView,QTabWidget::pane{
+border:1px solid #D8D8D8;
+selection-background-color:#636363;
+selection-color:#232524;
+alternate-background-color:#DDE0E7;
+}
+
+QTableView::item:selected,QListView::item:selected,QTreeView::item:selected{
+color:#CACAD0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QTableView::item:hover,QListView::item:hover,QTreeView::item:hover{
+color:#CACAD0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QTableView::item,QListView::item,QTreeView::item{
+padding:5px;
+margin:0px;
+}
+
+QHeaderView::section,QTableCornerButton:section{
+padding:3px;
+margin:0px;
+color:#CACAD0;
+border:1px solid #575757;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QTabBar::tab{
+border-radius:5px;
+border:1px solid #D8D8D8;
+color:#CACAD0;
+min-width:55px;
+min-height:20px;
+padding:3px 8px 3px 8px;
+margin:1px;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+QTabBar::tab:selected,QTabBar::tab:hover{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QStatusBar::item{
+border:0px solid #4D4D4D;
+border-radius:3px;
+}
+
+QToolBox::tab,QToolTip,QGroupBox#gboxDevicePanel{
+padding:3px;
+border-radius: 5px;
+color:#CACAD0;
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #4D4D4D,stop:1 #292929);
+}
+
+QToolBox::tab:selected{
+background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #636363,stop:1 #575757);
+}
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame_2">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>87</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(245, 218, 159, 255), stop:1 rgba(255, 255, 255, 255));</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" rowspan="2">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="image/app.qrc">:/app/草莓.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" rowspan="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>208</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+
+QPushButton:hover{
+	
+	background-color: rgb(233, 255, 215);
+   
+}
+QPushButton:pressed{
+	
+	
+   
+	background-color: rgb(255, 226, 249);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image/app.qrc">
+          <normaloff>:/app/减号.png</normaloff>:/app/减号.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton:hover{
+	
+	background-color: rgb(233, 255, 215);
+   
+}
+QPushButton:pressed{
+	
+	
+   
+	background-color: rgb(255, 226, 249);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image/app.qrc">
+          <normaloff>:/app/关闭.png</normaloff>:/app/关闭.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>华文琥珀</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;华文琥珀&quot;;
+border:2px solid rgb(79, 79, 79)
+</string>
+        </property>
+        <property name="text">
+         <string>案源分发V2.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>231</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="4" colspan="2">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>39</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>306</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 238);
+</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" rowspan="4">
+       <layout class="QVBoxLayout" name="tq_verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>268</width>
+          <height>131</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>268</width>
+          <height>131</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>101</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>勾选后跳过发送：</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked.png);
+}
+
+QCheckBox::indicator:checked{
+	
+	image: url(:/app/checkbox-checked (7).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>1 王</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>60</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (1).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	
+	image: url(:/app/checkbox-checked (6).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>2 周</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (2).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	image: url(:/app/checkbox-checked (5).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>3 彭</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>96</y>
+           <width>51</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (3).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	
+	image: url(:/app/checkbox-checked (4).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>4 李</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox5">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>40</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (4).png);
+}
+
+QCheckBox::indicator:checked{
+image: url(:/app/checkbox-checked (3).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>5 贺</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox6">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>60</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (5).png);
+}
+
+QCheckBox::indicator:checked{
+image: url(:/app/checkbox-checked (2).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>6 余</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox7">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>80</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (6).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	image: url(:/app/checkbox-checked (1).png);
+}</string>
+         </property>
+         <property name="text">
+          <string>7 郎</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="checkBox8">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>100</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (7).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	image: url(:/app/checkbox-checked.png);
+}</string>
+         </property>
+         <property name="text">
+          <string>8 尹</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="maximumSize">
+         <size>
+          <width>268</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QCheckBox" name="checkBox_3">
+        <property name="text">
+         <string>自动写入EXCEL</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2" rowspan="2">
+       <widget class="QPushButton" name="flushed_pushButton">
+        <property name="maximumSize">
+         <size>
+          <width>44</width>
+          <height>44</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+
+QPushButton:hover{
+	
+	background-color: rgb(233, 255, 215);
+   
+}
+QPushButton:pressed{
+	
+	
+   
+	background-color: rgb(255, 226, 249);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image/app.qrc">
+          <normaloff>:/app/刷新 (1).png</normaloff>:/app/刷新 (1).png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QCheckBox" name="atcheckBox">
+        <property name="text">
+         <string>@收件人</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>231</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>231</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 238);
+GroupBox{
+	border:2px solid rgb(79, 79, 79);}
+</string>
+     </property>
+     <property name="title">
+      <string>输入区</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <property name="topMargin">
+       <number>12</number>
+      </property>
+      <item row="0" column="0" colspan="8">
+       <widget class="QTextEdit" name="textEdit">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>客户手机号*：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QLineEdit" name="phoneLineEdit">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>发送至：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QComboBox" name="comboBox">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>1.王</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2.周</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3.彭</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>4.李</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>5.贺</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>6.余</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7.郎</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>8.尹</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QCheckBox" name="hlCheckBox">
+        <property name="text">
+         <string>华律</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QCheckBox" name="bd_checkBox">
+        <property name="styleSheet">
+         <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (9).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	
+	image: url(:/app/checkbox-checked (9).png);
+}</string>
+        </property>
+        <property name="text">
+         <string>百度</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7" rowspan="2">
+       <widget class="QPushButton" name="sendPushButton">
+        <property name="minimumSize">
+         <size>
+          <width>81</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{background-color: rgb(255, 221, 229);}
+
+QPushButton:hover{
+	
+	background-color: rgb(233, 255, 215);
+   
+}
+QPushButton:pressed{
+	
+	
+   
+	background-color: rgb(255, 226, 249);
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="image/app.qrc">
+          <normaloff>:/app/发送.png</normaloff>:/app/发送.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QLineEdit" name="webHookLineEdit">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="sercertLineEdit">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3" colspan="2">
+       <widget class="QCheckBox" name="autoJumCheckBox">
+        <property name="text">
+         <string>自动跳转开关</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QCheckBox" name="ltCheckBox">
+        <property name="styleSheet">
+         <string notr="true">QCheckBox::indicator:unchecked{
+image: url(:/app/checkbox-unchecked (8).png);
+}
+
+QCheckBox::indicator:checked{
+	
+	
+	
+	image: url(:/app/checkbox-checked (8).png);
+}</string>
+        </property>
+        <property name="text">
+         <string>律图</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="image/app.qrc"/>
+  <include location="../../.designer/backup/image/app.qrc"/>
+ </resources>
+ <connections/>
+</ui>
